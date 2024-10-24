@@ -2,18 +2,32 @@ name: Buils Pipeline
 
 on:
   push:
-    branches:  [ "main" ]
+    branches:
+    - main
+
 
 jobs:
-  build:
-    runs-on: cm-runner-1  #Self-Hosted runner
+  my_job:
+    name: deploy to staging
+    runs-on: ubuntu-22.04
 
     steps:
-
-    - uses: actions/checkout@3
-
-    - name: ls
-      run: ls -la
+    - uses: actions/checkout@v4
 
     - name: pwd
       run: pwd
+
+# jobs:
+#   build:
+#     runs-on: 
+#       -  cm-runner-1  #Self-Hosted runner
+
+#     steps:
+
+#     - uses: actions/checkout@3
+
+#     - name: ls
+#       run: ls -la
+
+#     - name: pwd
+#       run: pwd
