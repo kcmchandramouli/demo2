@@ -10,7 +10,7 @@ jobs:
   my_job:
     name: deploy to staging
     # runs-on: ubuntu-22.04
-    runs-on: cm-runner-1
+    runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v4
